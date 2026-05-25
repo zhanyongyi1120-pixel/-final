@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>深海單字探險</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.12.2/dist/ml5.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Noto+Sans+TC:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      /* 深海漸層背景 */
+      background: linear-gradient(to bottom, #004e92, #000428);
+      font-family: 'Nunito', 'Noto Sans TC', sans-serif;
+      overflow: hidden;
+    }
+    
+    #app-container {
+      position: relative;
+      width: 800px;
+      height: 600px;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0px 15px 50px rgba(0,0,0,0.8);
+      border: 4px solid rgba(255, 255, 255, 0.2);
+    }
+
+    button {
+      font-family: 'Nunito', 'Noto Sans TC', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.4);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,255,255,0.3);
+    }
+
+    .center-x { transform: translateX(-50%); }
+
+    /* 測驗區與學習區切換按鈕專屬色 */
+    #btnQuiz { background: linear-gradient(135deg, #ff7e5f, #feb47b); color: #fff; }
+    #btnLearn { background: linear-gradient(135deg, #00c6ff, #0072ff); color: #fff; }
+  </style>
+</head>
+<body>
+  <div id="app-container"></div>
+  <script src="sketch.js"></script>
+</body>
+</html>
